@@ -7,9 +7,15 @@
 <body>
 <div id="app">
     <ul>
-        <li><a data-href="/" href="#">home</a></li>
-        <li><a data-href="/about" href="#">about</a></li>
-        <li><a data-href="/topics" href="#">topics</a></li>
+        <li>
+            <a href="#/">home</a>
+        </li>
+        <li>
+            <a href="#/about">about</a>
+        </li>
+        <li>
+            <a href="#/topics">topics</a>
+        </li>
     </ul>
     <div id="content"></div>
 </div>
@@ -17,13 +23,14 @@
 <script>
     const router = new Router();
     router.init();
-    router.route('/', function() {
+    /*注册路由*/
+    router.route('/', function () {
         document.getElementById('content').innerHTML = 'Home';
     });
-    router.route('/about', function() {
+    router.route('/about', function () {
         document.getElementById('content').innerHTML = 'About';
     });
-    router.route('/topics', function() {
+    router.route('/topics', function () {
         document.getElementById('content').innerHTML = 'Topics';
     });
 </script>
